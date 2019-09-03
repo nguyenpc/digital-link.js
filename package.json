@@ -2,9 +2,10 @@
   "name": "digital-link.js",
   "version": "1.1.0",
   "description": "An SDK for creating and validating GS1 Digital Link URLs and objects.",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "scripts": {
-    "build-es5": "babel src --out-dir dist --ignore node_modules",
+    "build-es5": "npm run build-lib && babel src --out-dir dist/src --ignore node_modules",
+    "build-lib": "babel lib --out-dir dist/lib --ignore node_modules",
     "build": "webpack --config webpack.config.js --mode production",
     "build-dev": "webpack --config webpack.config.js --mode development",
     "test": "nyc mocha tests/index.js && rm -rf .nyc_output"
