@@ -2,8 +2,9 @@
   "name": "digital-link.js",
   "version": "1.1.0",
   "description": "An SDK for creating and validating GS1 Digital Link URLs and objects.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build-es5": "babel src --out-dir dist --ignore node_modules",
     "build": "webpack --config webpack.config.js --mode production",
     "build-dev": "webpack --config webpack.config.js --mode development",
     "test": "nyc mocha tests/index.js && rm -rf .nyc_output"
@@ -11,6 +12,9 @@
   "author": "EVRYTHNG",
   "license": "Apache-2.0",
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/plugin-proposal-async-generator-functions": "^7.2.0",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "babel-loader": "^8.0.6",
