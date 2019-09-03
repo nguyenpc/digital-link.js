@@ -1,5 +1,5 @@
 const apglib = require('apg-lib');
-const { grammarObject: GrammarObject } = require('./lib/grammarObject');
+const { grammarObject: GrammarObject } = require('../lib/grammarObject');
 
 const GRAMMAR = new GrammarObject();
 

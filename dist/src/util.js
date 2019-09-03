@@ -4,7 +4,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
 var apglib = require('apg-lib');
 
-var _require = require('./lib/grammarObject'),
+var _require = require('../lib/grammarObject'),
     GrammarObject = _require.grammarObject;
 
 var GRAMMAR = new GrammarObject();
